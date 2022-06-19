@@ -13,17 +13,18 @@
 example:
 ```
         Promise promise = new Promise((r) -> {
-            System.out.println("context");
-            System.out.println(1/0);
-            //r.resolve("Fuck");
+            // TODO async 
+            // resolve async result
+            r.resolve(result);
         }).then((result) -> {
-            System.out.println("caller then");
-            System.out.println(String.valueOf(result));
+            // TODO success
+            // handle success result
         }).exception((e) -> {
-            System.out.println("caller capture - " + e.toString());
+            // TODO exception
+            // handle exceptions
         }).complete((result)->{
-            System.out.println("complete");
-            System.out.println(result);
+            // TODO async task complete
+            // finally
         });
 
 ```
